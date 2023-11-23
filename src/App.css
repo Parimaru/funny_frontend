@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+:root {
+  --käguruGrün: #afc638;
+  --käguruBlau: #4dbfd8;
+  --käguruOrange: #c6361e;
+  --funny: #47a025;
+  --notFunny: #c6361e;
+  --lightOrange: #dda448;
+  --borders: black;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--lightOrange);
+  margin: 0;
+  font-family: 'Comic Neue', Verdana, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  opacity: 0.8;
+}
+
+label {
+  font-size: large;
+}
+
+input {
+  text-align: center;
+}
+
+[class*='quoteBox'] {
+  border: var(--black) 1px solid;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  background-color: #e4eaee;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 700px) 1fr;
+  grid-template-rows: 4rem 1fr auto;
+}
+
+/* Buttons --------------------------------------------------*/
+
+.boxButton {
+  background: transparent;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: -2px;
+}
+
+.neutral {
+  border: var(--käguruBlau) 3px solid;
+  color: var(--käguruBlau);
+}
+
+.funny {
+  border: var(--funny) 3px solid;
+  color: var(--funny);
+}
+
+.not-funny {
+  border: var(--notFunny) 3px solid;
+  color: var(--notFunny);
+}
+
+/* Navbar --------------------------------------------------*/
+
+.navbar {
+  background-color: #eed1a4;
+  border-bottom: var(--black) 1px solid;
+  min-height: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  padding-right: 3rem;
+  padding-top: 1.5rem;
+}
+
+.navbar:hover {
+  color: #4dbfd8;
+}
+
+/* votePage --------------------------------------------------*/
+
+.quoteBox-vote {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.vote-Box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.author {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.report {
+  display: block;
+}
+
+.credits {
+  margin: 0;
+}
+
+.quoteBox-vote .buttonPart {
+  opacity: 0.8;
+  margin-top: 1em;
+  font-size: 0.8em;
+  justify-content: space-between;
+}
+
+/* creativePage --------------------------------------------------*/
+
+.creativeInput {
+  display: grid;
+}
+
+.quoteBox-new {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+/* topPage --------------------------------------------------*/
+
+.quoteBox-top {
+  grid-column: 2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.oneLine {
+  display: inline-block;
+}

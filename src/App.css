@@ -7,6 +7,7 @@
   --funny: #47a025;
   --notFunny: #c6361e;
   --lightOrange: #dda448;
+  --darkOrange: #865200;
   --borders: black;
   --white: #ffffff;
 }
@@ -21,11 +22,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-a:visited {
-  color: black;
-  opacity: 0.8;
 }
 
 label {
@@ -75,6 +71,10 @@ input {
   color: var(--notFunny);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Navbar --------------------------------------------------*/
 
 .navbar {
@@ -82,14 +82,28 @@ input {
   border-bottom: var(--black) 1px solid;
   min-height: 2.5rem;
   display: flex;
-  gap: 1rem;
-  justify-content: end;
-  padding-right: 3rem;
+  gap: 2rem;
+  justify-content: center;
   padding-top: 1.5rem;
 }
 
-.navbar:hover {
+.navbar a:hover {
   color: #4dbfd8;
+}
+
+.navbar a {
+  width: 8em;
+  text-align: center;
+}
+
+a:visited {
+  color: black;
+  opacity: 0.8;
+}
+
+a.active {
+  color: var(--darkOrange);
+  text-decoration: underline;
 }
 
 /* votePage --------------------------------------------------*/

@@ -1,10 +1,4 @@
-import { useState, useContext } from 'react';
-import { QuotesDataContext } from '../context/QuotesContext';
-
 export default function TopBlock({ quote, index }) {
-  const { currentCount, setCurrentCount, allQuotesDB, lengthAllQuotesDB } =
-    useContext(QuotesDataContext);
-
   return (
     <div className='quoteBox-top' style={{ gridRow: `${index + 2}` }}>
       <div>

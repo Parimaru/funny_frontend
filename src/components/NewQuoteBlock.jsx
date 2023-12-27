@@ -46,10 +46,10 @@ export default function NewQuoteBlock() {
         <br />
         <form>
           <div className='creativeInput'>
-            <label htmlFor='fakeAuthor'>Funny Fake Author </label>
+            <label htmlFor='fakeAuthor'>Funny Fake Author</label>
             <input type='text' id='fakeAuthor' />
             <br />
-            <label htmlFor='userName'>Your Nickname </label>
+            <label htmlFor='userName'>Your Nickname</label>
             <input type='text' id='userName' />
             <br />
           </div>

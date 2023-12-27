@@ -1,18 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { QuotesDataContext } from '../context/QuotesContext';
 
 export default function VoteBlock() {
   //Get quoteFromDB from DB
-
-  const quoteFromDB = {
-    quote: 'Lirum, larum Löffelstiel',
-    fakeAuthor: 'Uri Geller',
-    originalAuthor: 'Sprichwort',
-    funny: 5,
-    notfunny: 2,
-    creator: 'User',
-    reported: false,
-  };
+  const { currentCount, setCurrentCount, allQuotesDB, lengthAllQuotesDB } =
+    useContext(QuotesDataContext);
 
   const [trigger, setTrigger] = useState(false);
 
@@ -20,14 +13,22 @@ export default function VoteBlock() {
     <div className='quoteBox-vote'>
       <div style={{ gridColumn: '2' }}>
         <p className='quote'>
-          <q>{quoteFromDB?.quote}</q>
+          <q>{allQuotesDB[currentCount]?.quote}</q>
         </p>
-        <p className='author'>- {quoteFromDB?.fakeAuthor}</p>
+        <p className='author'>- {allQuotesDB[currentCount]?.fakeAuthor}</p>
         <form className='vote-Box'>
           <button
             className='boxButton funny'
             id='funny'
             style={{ rotate: `${Math.floor(Math.random() * 20) - 10}deg` }}
+            onClick={() => {
+              lengthAllQuotesDB <= currentCount + 1
+                ? setCurrentCount(0)
+                : setCurrentCount(currentCount + 1);
+              console.log(lengthAllQuotesDB);
+              console.log(currentCount);
+              console.log(allQuotesDB[currentCount]);
+            }}
           >
             FUNNY
           </button>
@@ -35,12 +36,22 @@ export default function VoteBlock() {
             className='boxButton not-funny'
             id='not-funny'
             style={{ rotate: `${Math.floor(Math.random() * 20) - 10}deg` }}
+            onClick={() => {
+              lengthAllQuotesDB <= currentCount + 1
+                ? setCurrentCount(0)
+                : setCurrentCount(currentCount + 1);
+              console.log(lengthAllQuotesDB);
+              console.log(currentCount);
+              console.log(allQuotesDB[currentCount]);
+            }}
           >
             NOT FUNNY
           </button>
         </form>
         <div className='buttonPart' style={{ display: 'flex' }}>
-          <p className='credits'>Credits to: {quoteFromDB?.creator}</p>
+          <p className='credits'>
+            Credits to: {allQuotesDB[currentCount]?.creator}
+          </p>
           <a href='./' className='report'>
             !Report
           </a>
@@ -49,7 +60,14 @@ export default function VoteBlock() {
       <Link
         to='/'
         style={{ alignSelf: 'center' }}
-        onClick={() => setTrigger(!trigger)}
+        onClick={() => {
+          lengthAllQuotesDB <= currentCount + 1
+            ? setCurrentCount(0)
+            : setCurrentCount(currentCount + 1);
+          console.log(lengthAllQuotesDB);
+          console.log(currentCount);
+          console.log(allQuotesDB[currentCount]);
+        }}
       >
         <img
           src='/arrow-right-3098.png'

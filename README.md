@@ -8,8 +8,8 @@
 #### GitHub Fontend: https://github.com/Parimaru/funny_frontend
 #### GitHub Backend: https://github.com/Parimaru/funny_backend
 
-#### Description:
-##### Concept:
+### Description:
+#### Concept:
 Concept:
 Inspired by the book "The Kangaroo Chronicles" by Marc Uwe Kling, which uses misattributed quotes and categorizes them as funny or not funny.
 

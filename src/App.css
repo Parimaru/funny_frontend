@@ -25,7 +25,7 @@ a {
 }
 
 label {
-  font-size: large;
+  font-size: 0.8em;
 }
 
 input {
@@ -148,6 +148,7 @@ a.active {
 
 .creativeInput {
   display: grid;
+  gap: 1rem;
 }
 
 .quoteBox-new {
@@ -157,16 +158,28 @@ a.active {
   grid-template-columns: 1fr 5fr 1fr;
 }
 
+#nextQuote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  font-size: 18px;
+  height: 2rem;
+}
+
 /* topPage --------------------------------------------------*/
 
 .quoteBox-top {
   grid-column: 2;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: grid;
-  grid-template-columns: 5fr 2fr;
 }
 
-.oneLine {
-  display: inline-block;
+.voted {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }

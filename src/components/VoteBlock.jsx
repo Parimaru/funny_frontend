@@ -9,7 +9,7 @@ export default function VoteBlock() {
   const vote = async (booleanFunny) => {
     console.log(allQuotesDB[currentCount]._id);
     try {
-      const url = `http://localhost:8080/qData/${allQuotesDB[currentCount]._id}`;
+      const url = `https://funnyquotes.onrender.com/qData/${allQuotesDB[currentCount]._id}`;
       const response = await fetch(`${url}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -61,9 +61,9 @@ export default function VoteBlock() {
           <p className='credits'>
             Credits to: {allQuotesDB[currentCount]?.creator}
           </p>
-          <a href='./' className='report'>
+          {/* <a href='./' className='report'>
             !Report
-          </a>
+          </a> */}
         </div>
       </div>
       <button

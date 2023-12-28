@@ -6,7 +6,7 @@ export default function TopQuotesPage() {
 
   const fetchTopQuotesDB = async () => {
     try {
-      const url = 'http://localhost:8080/qData/top';
+      const url = 'https://funnyquotes.onrender.com/qData/top';
       const response = await fetch(`${url}`);
       const data = await response.json();
       setTopQuotesDB(data);

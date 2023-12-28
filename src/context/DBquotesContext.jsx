@@ -9,7 +9,7 @@ export default function QuotesDataContextProvider(props) {
 
   const fetchQuotesDB = async () => {
     try {
-      const url = 'http://localhost:8080/qData';
+      const url = 'https://funnyquotes.onrender.com/qData';
       const response = await fetch(`${url}`);
       const data = await response.json();
       setAllQuotes(data);

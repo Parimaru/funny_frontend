@@ -3,14 +3,24 @@ export default function TopBlock({ quote, index }) {
     <div className='quoteBox-top' style={{ gridRow: `${index + 2}` }}>
       <div>
         <q>{quote.quote}</q>
-        <div className='author'>- {quote.fakeAuthor}</div>
+        <p className='author'>- {quote.fakeAuthor}</p>
       </div>
-      <div className='oneLine'>
-        <div style={{ rotate: `${Math.floor(Math.random() * 20) - 10}deg` }}>
-          {`${quote.funny}x `}
-          <button className='boxButton funny' id='funny'>
-            FUNNY
-          </button>
+      <div className='voted'>
+        <div className='votesFunny'>
+          <div>
+            {`${quote.funny}x `}
+            <button className='boxButton funny' id='funny'>
+              FUNNY
+            </button>
+          </div>
+        </div>
+        <div className='votesNotFunny'>
+          <div>
+            {`${quote.notfunny}x `}
+            <button className='boxButton not-funny' id='funny'>
+              NOT FUNNY
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ export default function NewQuoteBlock() {
     const creator = e.target.elements['creator'].value;
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/qData`, {
+      const response = await fetch(`https://funnyquotes.onrender.com/qData`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify({
@@ -55,13 +55,16 @@ export default function NewQuoteBlock() {
       });
       const data = await response.json();
       console.log(data);
+      getQuoteAPI();
+      e.target.elements['fakeAuthor'].value = '';
+      e.target.elements['creator'].value = '';
     } catch (error) {
       console.log('Update votes on DB failed', error);
     }
   };
 
   useEffect(() => {
-    // getQuoteAPI();
+    getQuoteAPI();
   }, []);
 
   return (
@@ -79,6 +82,7 @@ export default function NewQuoteBlock() {
           >
             <button
               style={{ rotate: `${randomAngle}deg` }}
+              id='nextQuote'
               className='boxButton neutral pointer'
               onClick={() => {
                 getQuoteAPI();

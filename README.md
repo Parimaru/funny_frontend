@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Funny Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Video Demo: https://www.youtube.com/watch?v=PEfYZ0PH5T0
 
-## Available Scripts
+#### Deployed: https://github.com/Parimaru/funny_frontend/tree/main
+(If you don't see a quote instantly wait some minutes, because the backend needs to wake up after inactivity)
 
-In the project directory, you can run:
+#### GitHub Fontend: https://github.com/Parimaru/funny_frontend
+#### GitHub Backend: https://github.com/Parimaru/funny_backend
 
-### `npm start`
+#### Description:
+##### Concept:
+Concept:
+Inspired by the book "The Kangaroo Chronicles" by Marc Uwe Kling, which uses misattributed quotes and categorizes them as funny or not funny.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There are three options or tabs on this homepage:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Vote:
+- To influence the ranking of certain quotes in the database.
 
-### `npm test`
+GetCreative:
+- To assign a false author to a randomly provided quote from API Ninjas and save it in the database
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TopVotes:
+- An overview of the 10 misattributed quotes that were judged most funny by the community
 
-### `npm run build`
+#### Tools:
+This project is a website based on React (Javascript) that consists of a frontend and a backend.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For the backend, I used the npm packages Express, Mongoose, Cors, etc. to access and edit a database I created.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Since the node_modules folder is not uploaded to GitHub for storage space efficiency, "npm i" must be executed at the beginning.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Node.js and npm are required to use the application.
 
-### `npm run eject`
+"npm start" runs the app in development mode.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I refer to a project that I found online that has implemented a similar concept but is in German:
+https://zitate.prapsschnalinen.de/

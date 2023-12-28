@@ -66,7 +66,7 @@ export default function VoteBlock() {
           </a> */}
         </div>
       </div>
-      <button
+      <div
         to='/'
         style={{ alignSelf: 'center' }}
         onClick={() => {
@@ -74,13 +74,14 @@ export default function VoteBlock() {
             ? setCurrentCount(0)
             : setCurrentCount(currentCount + 1);
         }}
+        className='pointer'
       >
         <img
           src='/arrow-right-3098.png'
           alt='next quote'
           style={{ height: '40px' }}
         />
-      </button>
+      </div>
     </div>
   );
 }
